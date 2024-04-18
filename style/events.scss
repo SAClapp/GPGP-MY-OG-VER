@@ -1,0 +1,383 @@
+@charset "UTF-8";
+/* SCSS Document */
+@mixin header {
+    font-family: "Rubik", sans-serif;
+    font-weight: bolder;
+}
+@mixin regText {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+header {
+    color: #EFECE7;
+    background-color: #A98444;
+    opacity: 80%;
+    height: 65px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: relative;
+    z-index: 999;
+nav {
+    position: relative;
+    z-index: 999;
+}
+    #desktopNav {
+        font-weight: normal;
+        display: flex;
+        flex-direction: row;
+        a {
+            color: #EFECE7;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        a:hover {
+            color:#ffffff;
+        }
+        div {
+            margin-left: 30px;
+        }
+        #brand {
+            @include header;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        #link {
+            @include regText;
+            padding-top: 15px;
+            padding-bottom: 12px;
+        }
+
+        #logIn {
+            @include regText;
+            background-color: #A98444;
+            border: 1px solid white;
+            height: 45px;
+            width: 120px;
+            text-align: center;
+            justify-content: flex-end; 
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: 30px;
+            padding-top: 10px;
+        }
+        #logIn:hover {
+            background-color: #D5AB62;
+        }
+    }
+
+    /* mobile  navigation menu */
+.mobileNav {
+    z-index: 999;
+    background: #A98444;
+    position: relative;
+  }
+  
+  .mobileNav #mobileLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .mobileNav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    min-height: fit-content;
+  }
+  
+  /* Style the hamburger menu */
+  .mobileNav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #mbrand {
+    color: white;
+    @include header;
+    font-size: 20px;
+  }
+}
+
+
+
+.showDay {
+    background-color: #1D213B;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    @include header;
+  }
+  
+  .active, .showDay:hover {
+    background-color: #2a305a;
+  }
+  
+  .showDay:after {
+    content: '\002B';
+    color: #D5AB62;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: #2a305a;
+    ul {
+        font-size: 20px;
+    }
+  }
+
+
+footer {
+    background-color: #A98444;
+    opacity: 85%;
+    left: 0;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 40px;
+    a {
+        color: #EFECE7;
+        text-decoration: none;
+    }
+    a:hover {
+        color:#ffffff;
+    }
+    #links {
+        padding-top: 40px;
+    }
+    #copyright {
+        padding-top: 70px;
+        padding-right: 40px;
+    }
+}
+
+#banner {
+    color: #EFECE7;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
+    h1 {
+        @include header;
+        font-size: 60px;
+        padding-top: 150px;
+    }
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: #0C0D0F; 
+    opacity: 85%;
+    z-index: 1; 
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 50px;
+    color: #EFECE7;
+    h2 {
+        @include header;
+    }
+    p {
+        @include regText;
+    }
+    #viewEvent {
+        @include regText;
+        color:#0C0D0F;
+        background-color: #D5AB62;
+        opacity: 100%;
+        height: 45px;
+        width: 120px;
+        text-align: center;
+        justify-content: flex-end; 
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: 30px;
+        padding-top: 10px;
+      }
+  }
+  #highlightEvent {
+    margin-top:50px;
+    margin-left: 350px;
+    #mobileEvent {
+        display: none;
+    }
+  }
+
+  .container {
+    margin-top: 80px;
+    .row {
+        h5 {
+            margin-top: 50px;
+            a {
+            color: #9F412C;
+            @include regText;
+            }
+        }
+        .col-md-4 {
+            margin-top: 60px;
+            padding: 25px 20px 25px 20px;
+            margin-right: 30px;
+            width: 400px;
+            @include regText;
+            background-color: #2a305a;
+            opacity: 85%;
+            h4, p {
+                text-align: left;
+                color:#EFECE7;
+            }
+            a {
+                color: #D5AB62;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.col-md-12 {
+    margin-left: 350px;
+    background-color: #1D213B;
+    width: 600px;
+    opacity: 75%;
+    padding-top: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #EFECE7;
+    img {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    h2 {
+        @include header;
+        font-weight: normal;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    p, h5, section {
+        text-align: left;
+        padding-left: 30px;
+    }
+    h4 {
+        @include header;
+        text-align: left;
+    }
+}
+
+
+
+
+//MEDIA QUERIES
+
+@media screen and (min-width: 600px) {
+    .mobileNav {
+        display: none;
+    }
+}
+
+  @media screen and (max-width: 600px) {
+    #banner {
+        display: none;
+    }
+
+    body {
+        background-size: auto;
+    }
+
+    header #desktopNav {
+        display: none;
+    }
+
+    #highlightEvent {
+        margin-left: auto;
+        #mobileEvent {
+            display: inline;
+            color:#EFECE7;
+            #text {
+                background-color: #1D213B;
+                opacity: 85%;
+            }
+        }
+        #viewEvent {
+            @include regText;
+            color:#0C0D0F;
+            background-color: #D5AB62;
+            opacity: 100%;
+            height: 45px;
+            width: 120px;
+            text-align: center;
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: 30px;
+            padding-top: 10px;
+            float: left;
+          }
+      }
+    
+    .image-container {
+        display: none;
+    }
+
+    .col-md-4 {
+        margin-top: 60px;
+        padding: 25px 20px 25px 20px;
+        margin-right: 0px;
+        width: 300px;
+    }
+
+    footer {
+        padding-left: auto;
+        flex-direction: column;
+        #links {
+            padding-top: 10px;
+        }
+        #copyright {
+            padding-top: 10px;
+            padding-right: 40px;
+        }
+    }
+
+    .col-md-12 {
+        margin-left: auto;
+        width: 100%;
+        h2, p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
